@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 220 10% 3.9%;
+
+    --card: 210 40% 98%;
+    --card-foreground: 220 10% 3.9%;
+
+    --popover: 210 40% 98%;
+    --popover-foreground: 220 10% 3.9%;
+
+    --primary: 220 70% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 50% 90%;
+    --secondary-foreground: 220 70% 40%;
+    --secondary-text: 220 40% 40%;
+
+    --muted: 210 40% 90%;
+    --muted-foreground: 220 40% 46.1%;
+
+    --accent: 220 60% 80%;
+    --accent-foreground: 220 70% 40%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 50% 85%;
+    --input: 220 50% 85%;
+    --ring: 220 70% 40%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 40% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 40% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 40% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 220 70% 40%;
+
+    --secondary: 220 50% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 40% 20%;
+    --muted-foreground: 210 40% 80%;
+
+    --accent: 220 50% 30%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 50% 20%;
+    --input: 220 50% 20%;
+    --ring: 210 40% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: slide-in-from-bottom 0.2s ease-out;
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: slide-in-from-bottom 0.2s ease-out;
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: slide-in-from-bottom 0.2s ease-out;
+}
