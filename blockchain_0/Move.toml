@@ -4,7 +4,7 @@ description = "Aptos Move contract for the first contract"
 version = "1.0.0"
 
 [addresses]
-blockchain_0="0x1940dbec82114da95a4f5e872d46cf617ced04d4b5b76485d5dc4c2cc4c2272c"
+blockchain_0="0x233b40f7f208d5cced6d5eef7180c2edbbd395f497a8121c100ac8ebda59025a"
 aptos_framework = "0x1"
 
 

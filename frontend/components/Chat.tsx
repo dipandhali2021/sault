@@ -305,7 +305,34 @@ export default function ChatWithDocs({ isOpen, onClose }: ChatWithDocsProps) {
                   ) : (
                     <User className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                   )}
-                  <p className="text-sm whitespace-pre-wrap text-gray-800">{msg.content}</p>
+                  <div className="text-sm whitespace-pre-wrap text-gray-800">
+                    {msg.role === 'ai' ? (
+                      msg.content.split('\n').map((line, index) => {
+                        // Check for bullet points
+                        if (line.trim().startsWith('*')) {
+                          return (
+                            <p key={index} className="ml-4 mb-2">
+                              • {line.trim().substring(1).trim()}
+                            </p>
+                          );
+                        }
+                        // Check for document reference headers
+                        else if (line.trim().startsWith('Document ID:')) {
+                          return (
+                            <p key={index} className="font-semibold border-t border-gray-200 mt-2 pt-2 mb-2">
+                              {line.trim()}
+                            </p>
+                          );
+                        }
+                        // Regular text
+                        else {
+                          return <p key={index} className="mb-2">{line.trim()}</p>;
+                        }
+                      })
+                    ) : (
+                      msg.content
+                    )}
+                  </div>
                 </div>
               </div>
             ))
