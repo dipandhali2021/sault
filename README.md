@@ -117,7 +117,7 @@ sault/
 
 ## 📊 Workflow
 
-<img src="./public/workflow.png" alt="workflow" />
+<img src="./public/workflow.jpg" alt="workflow" />
 
 ---
 
